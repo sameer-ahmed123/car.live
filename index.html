@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .corner {
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #Fff;
+            background: rgba(198, 211, 231, 0.6);
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 50%;
+        }
+
+        .card {
+            display: block;
+            z-index: 0;
+            max-width: 265px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            /* background: transparent; */
+            backdrop-filter: blur(0px);
+            padding: 32px;
+            border: 1px solid #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.20s ease-out;
+
+
+        }
+
+        .card::before {
+            content: "";
+            height: 20px;
+            width: 20px;
+            z-index: -1;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 0 50%;
+            transform: scale(1);
+            transition: transform 0.20s ease-out;
+
+        }
+
+        .card:hover::before {
+
+            transform: scale(35);
+
+        }
+
+        .card:hover {
+            color: #000;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="height: 100vh;display: flex;justify-content: center;align-items: center;background-image: url(/images/ursa-bavcar-6O4zf9lga6Q-unsplash.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+
+
+
+        <a href="#" style="text-decoration: none;color: #7c7c7c;font-size: 20px;">
+            <div class="card">
+                <h3>
+                    The card
+                </h3>
+                <p>this is my card made by me // </p>
+                <div class="corner">
+                    <div>
+                        +
+                    </div>
+
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
